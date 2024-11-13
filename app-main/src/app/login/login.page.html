@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <h2 style="text-align: center;">Iniciar Sesión</h2>
+
+        <form (ngSubmit)="onSubmit()">
+          <ion-item>
+            <ion-label position="floating">Correo Electrónico</ion-label>
+            <ion-input type="email" [(ngModel)]="email" name="email" required></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Contraseña</ion-label>
+            <ion-input type="password" [(ngModel)]="password" name="password" required></ion-input>
+          </ion-item>
+          <ion-button expand="full" type="submit" style="background-color: #28a745; color: white; margin-top: 20px;">Iniciar Sesión</ion-button>
+        </form>
+
+        <ion-button expand="full" color="primary" routerLink="/registro" style="margin-top: 10px;">Registrarse</ion-button>
+
+        <!-- Opción para recuperar contraseña -->
+        <ion-button expand="full" color="light" routerLink="/recuperar" style="margin-top: 10px;">¿Olvidaste tu contraseña?</ion-button>
+        
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="light">
+    <div class="text-center" style="display: flex; justify-content: center; align-items: center; width: 100%; padding: 10px;">
+      <p style="font-size: 0.9rem; color: var(--ion-text-color-step-600); text-align: center;">
+        &copy; 2024 TeLlevoAPP. Todos los derechos reservados.
+      </p>
+    </div>
+  </ion-toolbar>
+</ion-footer>

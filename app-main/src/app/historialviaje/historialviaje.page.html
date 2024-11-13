@@ -1,0 +1,31 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Mis Viajes</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+    <h2>Viajes Ofrecidos por Mí</h2>
+    <ion-list>
+        <ion-item *ngFor="let viaje of viajesOfrecidos" detail>
+            <ion-label>
+                <h2>{{ viaje.ruta }}</h2>
+                <p>Conductor: {{ viaje.conductor }}</p>
+                <p>Horario: {{ viaje.horario }}</p>
+                <p>Costo: <strong>${{ viaje.costo }}</strong></p>
+            </ion-label>
+            <ion-buttons slot="end">
+                <ion-button color="danger" (click)="cancelarViaje(viaje.id)">Cancelar</ion-button>
+            </ion-buttons>
+        </ion-item>
+    </ion-list>
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="light">
+    <div class="text-center" style="display: flex; justify-content: center; align-items: center; width: 100%; padding: 10px;">
+      <p style="font-size: 0.9rem; color: var(--ion-text-color-step-600); text-align: center;">
+        &copy; 2024 TeLlevoAPP. Todos los derechos reservados.
+      </p>
+    </div>
+  </ion-toolbar>
+</ion-footer>

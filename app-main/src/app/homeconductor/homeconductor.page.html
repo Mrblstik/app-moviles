@@ -1,0 +1,67 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">Conductor - TeLlevoApp</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container" class="ion-padding" style="margin-top: 30px;">
+    <!-- Título principal -->
+    <!-- Mensaje de Bienvenida -->
+    <div class="welcome-message text-center">
+      <p>Bienvenido, Conductor. ¡Gracias por ayudar a la comunidad estudiantil a moverse!</p>
+    </div>
+
+    <!-- Botones de acción -->
+    <div class="button-group ion-margin-vertical">
+      <!-- Botón Ofrecer viaje -->
+      <ion-button expand="block" color="primary" (click)="offerRide()">
+        <ion-icon name="car" slot="start"></ion-icon> Ofrecer viaje
+      </ion-button>
+
+      <!-- Botón Ver historial de viajes -->
+      <ion-button expand="block" color="secondary" (click)="viewRideHistory()">
+        <ion-icon name="time-outline" slot="start"></ion-icon> Historial de viaje ofrecidos
+      </ion-button>
+
+      <!-- Botón Ver estudiantes que buscan conductor -->
+      <ion-button expand="block" color="tertiary" (click)="viewStudentsLookingForRides()">
+        <ion-icon name="people-outline" slot="start"></ion-icon> Estudiantes que buscan conductor
+      </ion-button>
+    </div>
+
+    <!-- Beneficios llamativos -->
+    <div class="benefits-section ion-padding">
+      <h2 class="text-center ion-margin-bottom">¿Por qué usar <strong>TeLlevoAPP</strong>?</h2>
+      <div class="benefits-grid">
+        <!-- Beneficio 1 -->
+        <div class="benefit-card">
+          <ion-icon name="time-outline" size="large" color="success"></ion-icon>
+          <h3>Ahorra tiempo</h3>
+          <p>Encuentra transporte rápidamente y evita largas esperas.</p>
+        </div>
+        <!-- Beneficio 2 -->
+        <div class="benefit-card">
+          <ion-icon name="people-outline" size="large" color="tertiary"></ion-icon>
+          <h3>Conoce compañeros</h3>
+          <p>Conecta con otros estudiantes mientras compartes el viaje.</p>
+        </div>
+        <!-- Beneficio 3 -->
+        <div class="benefit-card">
+          <ion-icon name="shield-checkmark-outline" size="large" color="primary"></ion-icon>
+          <h3>Viaja seguro</h3>
+          <p>Comparte tu viaje con confianza y seguridad.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="light">
+    <div class="text-center" style="display: flex; justify-content: center; align-items: center; width: 100%; padding: 10px;">
+      <p style="font-size: 0.9rem; color: var(--ion-text-color-step-600); text-align: center;">
+        &copy; 2024 TeLlevoAPP. Todos los derechos reservados.
+      </p>
+    </div>
+  </ion-toolbar>
+</ion-footer>
